@@ -6,11 +6,11 @@
 <div class="container">
     {% for produto in produto %}
     <article>
-        <img style="width: 100%; height: auto; border-radius: 8px;" src= {{ produto.imagem.url }} alt="Imagem da publicação">
-        <h2>{{ produto.nome }}</h2>
-        <p>{{ produto.dataPub }}</p>
-        <h3>{{ produto.quantidade }}</h3>
-        <p>{{ produto.preco }}</p>
+        <img  src= {{ produto.image }} alt="Imagem da publicação">
+        <h2>{{ produto.title }}</h2>
+        <p>{{ produto.price }}</p>
+        <h3>{{ produto.category }}</h3>
+        <p>{{ produto.description }}</p>
 
         
         
