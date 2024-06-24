@@ -4,4 +4,5 @@ from .models import Produtos,Vendas
 
 def index(request):
     produtos = Produtos.objects.all()
+    
     return render(request,'index.html',{"produto":produtos})

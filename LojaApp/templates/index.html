@@ -4,16 +4,16 @@
 
 {% block content %}
 <div class="container">
-    {% for publicacao in produto %}
+    {% for produto in produto %}
     <article>
-        <h2>{{ publicacao.nome }}</h2>
-        <p>{{ publicacao.dataPub }}</p>
-        <h3>{{ publicacao.quantidade }}</h3>
-        <p>{{ publicacao.preco }}</p>
+        <img style="width: 100%; height: auto; border-radius: 8px;" src= {{ produto.imagem.url }} alt="Imagem da publicação">
+        <h2>{{ produto.nome }}</h2>
+        <p>{{ produto.dataPub }}</p>
+        <h3>{{ produto.quantidade }}</h3>
+        <p>{{ produto.preco }}</p>
 
-        {% if publicacao.image %}
-        <img style="width: 100%; height: auto; border-radius: 8px;" src="{{ publicacao.imagem.url }}" alt="Imagem da publicação">
-        {% endif %}
+        
+        
     </article>
     {% endfor %}
 </div>
