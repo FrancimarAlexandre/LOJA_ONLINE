@@ -3,5 +3,18 @@
 {% block title %} Inicio {% endblock %}
 
 {% block content %}
+<div class="container">
+    {% for publicacao in produto %}
+    <article>
+        <h2>{{ publicacao.nome }}</h2>
+        <p>{{ publicacao.dataPub }}</p>
+        <h3>{{ publicacao.quantidade }}</h3>
+        <p>{{ publicacao.preco }}</p>
 
+        {% if publicacao.image %}
+        <img style="width: 100%; height: auto; border-radius: 8px;" src="{{ publicacao.imagem.url }}" alt="Imagem da publicação">
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>
 {% endblock %}

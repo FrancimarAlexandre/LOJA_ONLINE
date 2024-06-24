@@ -7,7 +7,7 @@ class Produtos(models.Model):
     preco = models.FloatField()
     dataPub = models.DateField(auto_now_add=True)
     quantidade = models.IntegerField()
-
+    imagem = models.ImageField(upload_to = 'img_produto/',null = True,blank = True,max_length=500)
     def __str__(self):
         return self.nome
     
