@@ -39,7 +39,9 @@
             {% for produto in produto %}
             <div class="product-card">
                 <div class="image_card">
+                   <a href="{% url 'PageCompra' produto.id %}">
                     <img src="{{ produto.image }}" alt="Imagem da publicação">
+                   </a>
                 </div>
                 <h2>{{ produto.title }}</h2>
                 <p class="price">${{ produto.price }}</p>
